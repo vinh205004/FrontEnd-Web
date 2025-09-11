@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yêu thích - Nhà xuất bản Kim Đồng</title>
+    <link rel="stylesheet" href="../lib/Bootstrap/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!--css-->
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/banner.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <!--js-->
+    <script src="../lib/Jquery/jquery-3.7.1.js"></script>
+    <script src="../lib/Bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/products.js"></script>
+    <script src="../js/includeHTML.js" defer></script>
+    <script src="../js/utils.js"></script>
+    <script src="../js/pagination.js"></script>
+    <script src="../js/wishlist.js"></script>
+
+</head>
+<body>
+    <!-- Include Header -->
+    <div include-html="header.html"></div>
+    
+    <!-- Banner danh mục -->
+    <div id="category-banner" class="category-banner">
+        <div class="container">
+            <h1 id="category-title">WISHLIST CỦA BẠN</h1>
+            <div class="breadcrumb-nav">
+                <a href="index.html">Trang chủ</a> > <span>Wishlist</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Main content - Wishlist -->
+    <div class="container my-5">
+        <div class="row mb-4">
+            <div class="col-12 d-flex justify-content-between align-items-center">
+                <h2>WISHLIST</h2>
+                <button id="clear-wishlist" class="btn btn-danger">Xóa tất cả</button>
+            </div>
+        </div>
+        
+        <div id="wishlist-container" class="row">
+            <!-- Danh sách sản phẩm yêu thích -->
+        </div>
+    </div>
+
+    <!-- Include footer -->
+    <div include-html="footer.html"></div>
+    
+</body>
+</html>

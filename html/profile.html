@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông tin cá nhân</title>
+    <link rel="stylesheet" href="../lib/Bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!--css-->
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/auth.css">
+    <!--js-->
+    <script src="../lib/Jquery/jquery-3.7.1.js"></script>
+    <script src="../lib/Bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/utils.js"></script>
+    <script src="../js/includeHTML.js" defer></script>
+</head>
+<body>
+    <!-- Include Header -->
+    <div include-html="header.html"></div>
+
+    <!-- Banner danh mục -->
+    <div id="category-banner" class="category-banner">
+        <div class="container">
+            <h1 id="category-title">THÔNG TIN CÁ NHÂN</h1>
+            <div class="breadcrumb-nav">
+                <a href="index.html" style="text-decoration: none; color: #000;">Trang chủ</a> > <span>Thông tin cá nhân</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <div class="card-header bg-danger text-white">
+                        <h5 class="mb-0">Tài khoản của tôi</h5>
+                    </div>
+                    <div class="list-group list-group-flush">
+                        <a href="profile.html" class="list-group-item list-group-item-action active">
+                            <i class="fas fa-user me-2"></i> Thông tin cá nhân
+                        </a>
+                        <a href="#" id="logoutBtn" class="list-group-item list-group-item-action text-danger">
+                            <i class="fas fa-sign-out-alt me-2"></i> Đăng xuất
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Main Content -->
+            <div class="col-md-9">
+                <div class="card">
+                    <div class="card-header bg-danger text-white">
+                        <h5 class="mb-0">Thông tin cá nhân</h5>
+                    </div>
+                    <div class="card-body">
+                        <div id="profile-info">
+                            <!-- Thông tin người dùng -->
+                            <div class="text-center py-5">
+                                <div class="spinner-border text-danger" role="status">
+                                    <span class="visually-hidden">Đang tải...</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div id="edit-profile-form" style="display: none;">
+                            <form id="updateProfileForm">
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <label for="editFullName" class="form-label">Họ và tên</label>
+                                        <input type="text" class="form-control" id="editFullName" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="editPhone" class="form-label">Số điện thoại</label>
+                                        <input type="tel" class="form-control" id="editPhone" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="editEmail" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="editEmail" readonly>
+                                    <small class="form-text text-muted">Email không thể thay đổi</small>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="editAddress" class="form-label">Địa chỉ</label>
+                                    <textarea class="form-control" id="editAddress" rows="3"></textarea>
+                                </div>
+                                <div class="d-flex justify-content-end">
+                                    <button type="button" id="cancelEditBtn" class="btn btn-secondary me-2">Hủy</button>
+                                    <button type="submit" class="btn btn-danger">Lưu thay đổi</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Include footer -->
+    <div include-html="footer.html"></div>
+    
+    <!-- Script xử lý trang profile -->
+    <script src="../js/profile.js"></script>
+</body>
+</html> 

@@ -1,0 +1,6 @@
+footer a :hover{
+    color: red;
+}
+footer li :hover a{
+    color: red;
+}

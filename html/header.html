@@ -1,0 +1,124 @@
+<!-- Header -->
+<header>
+    <!-- Top Bar -->
+    <div class="top-bar d-flex justify-content-between align-items-center">
+        <div class="social-links">
+            <a href="https://www.facebook.com/nxbkimdong" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/kimdongbooks/" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/user/KimDongPublishingHou" class="text-white"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="d-none d-md-block">
+            <i class="fas fa-wifi"></i> (+84) 1900571595 hoặc email: cskh_online@nxbkimdong.com.vn
+        </div>
+        <div class="contact-info">
+            <span class="me-3"><i class="fas fa-phone me-1"></i> (+84) 1900571595</span>
+            <span><i class="fas fa-envelope me-1"></i> cskh_online@nxbkimdong.com.vn</span>
+        </div>
+    </div>
+    
+    <!-- Main Header -->
+    <div class="container header-main py-3">
+        <div class="row align-items-center">
+            <!-- Search -->
+            <div class="search-container col-md-4 position-relative">
+                <form id="searchForm" class="search-box d-flex" aria-label="Tìm kiếm">
+                    <input type="text" id="searchInput" class="form-control" placeholder="Tìm kiếm..." aria-label="Tìm kiếm">
+                    <button type="submit" aria-label="Tìm" class="btn btn-link"><i class="fas fa-search text-danger"></i></button>
+                </form>
+                <div id="search-suggestions" class="list-group position-absolute w-100" style="z-index: 1000;"></div>
+            </div>
+
+            
+            <!-- Logo -->
+            <div class="col-md-4 text-center">
+                <a href="index.html">
+                    <img src="../images/Banners/logo.PNG" alt="Logo NXB Kim Đồng" width="80" height="80" loading="lazy">
+                </a>
+            </div>
+            
+            <!-- User Actions -->
+            <div class="col-md-4 text-end header-icons">
+                <a href="login.html" class="text-dark text-decoration-none me-3"><i class="fas fa-sign-in-alt me-1"></i> Đăng nhập</a>
+                <a href="register.html" class="text-dark text-decoration-none me-3"><i class="fas fa-user-plus me-1"></i> Đăng ký</a>
+                <a href="wishlist.html" class="position-relative me-3" aria-label="Sản phẩm yêu thích">
+                    <i class="far fa-heart"></i>
+                </a>
+                <a href="shop.html" class="position-relative" aria-label="Giỏ hàng" id="cart-icon">
+                    <i class="fas fa-shopping-bag"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-label="Mở menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex align-items-start">
+                
+                <!-- Danh mục sản phẩm -->
+                <li class="nav-item dropdown position-static">
+                    <div class="category-menu bg-white border">
+                        <div class="category-header bg-danger text-white px-3 py-2 fw-bold">
+                            <i class="fas fa-bars me-2"></i> DANH MỤC SẢN PHẨM
+                        </div>
+                        <div class="category-content">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item fw-bold text-danger"><a href="category.html?category=all" class="text-danger text-decoration-none">Tất cả sản phẩm</a></li>
+                                <li class="list-group-item"><i class="fas fa-book me-2"></i> <a href="category.html?category=Lịch%20sử,%20truyền%20thống" class="text-dark text-decoration-none">LỊCH SỬ, TRUYỀN THỐNG</a></li>
+                                <li class="list-group-item"><i class="fas fa-book me-2"></i> <a href="category.html?category=Văn%20học%20Việt%20Nam" class="text-dark text-decoration-none">VĂN HỌC VIỆT NAM</a></li>
+                                <li class="list-group-item"><i class="fas fa-book me-2"></i> <a href="category.html?category=Khoa%20học" class="text-dark text-decoration-none">KIẾN THỨC, KHOA HỌC</a></li>
+                                <li class="list-group-item"><i class="fas fa-book me-2"></i> <a href="category.html?category=Doraemon" class="text-dark text-decoration-none">DORAEMON</a></li>
+                                <li class="list-group-item"><i class="fas fa-book me-2"></i> <a href="category.html?category=Manga" class="text-dark text-decoration-none">MANGA - COMIC</a></li>
+                                <li class="list-group-item"><i class="fas fa-book me-2"></i> <a href="category.html?category=WingBooks" class="text-dark text-decoration-none">WINGS BOOKS</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Tin tức -->
+                <li class="nav-item dropdown">
+                    <div class="category-menu bg-white">
+                        <div class="category-header px-3 py-2">
+                            <a href="#" class="text-dark text-decoration-none fw-500">
+                                Tin tức <i class="fas fa-angle-down ms-1"></i>
+                            </a>
+                        </div>
+                        <div class="category-content">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><a href="hoatdong.html" class="text-dark text-decoration-none">Hoạt động</a></li>
+                                <li class="list-group-item"><a href="event.html" class="text-dark text-decoration-none">Sự kiện nổi bật</a></li>
+                                <li class="list-group-item"><a href="sgsl.html" class="text-dark text-decoration-none">Sách giả-Sách lậu</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Giới thiệu -->
+                <li class="nav-item dropdown">
+                    <div class="category-menu bg-white">
+                        <div class="category-header px-3 py-2">
+                            <a href="#" class="text-dark text-decoration-none fw-500">
+                                Giới thiệu <i class="fas fa-angle-down ms-1"></i>
+                            </a>
+                        </div>
+                        <div class="category-content">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><a href="nxb.html" class="text-dark text-decoration-none">Nhà xuất bản</a></li>
+                                <li class="list-group-item"><a href="ctxh.html" class="text-dark text-decoration-none">Công tác xã hội</a></li>
+                                <li class="list-group-item"><a href="ktnc.html" class="text-dark text-decoration-none">Khen thưởng của nhà nước</a></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<script src="../js/search.js"></script>
+<script src="../js/auth.js" defer></script>

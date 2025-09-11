@@ -1,0 +1,47 @@
+/* CSS cho navbar và danh mục */
+.navbar {
+    padding: 0;
+}
+
+
+.category-menu {
+    width: 200px;
+    position: relative;
+    
+}
+
+/* Điều chỉnh cho danh mục sản phẩm */
+.category-menu:first-child {
+    width: 250px;
+}
+
+.category-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 999;
+    background-color: white;
+    border: 1px solid #dee2e6;
+    width: 100%;
+    display: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.category-menu:hover .category-content {
+    display: block !important; /* Sử dụng !important để ghi đè lên d-none */
+}
+
+.category-menu .list-group-item {
+    cursor: pointer;
+    transition: background 0.2s;
+    padding: 8px 16px;
+}
+
+.category-menu .list-group-item:hover {
+    background-color: #f8f9fa;
+}
+
+.category-menu .category-header {
+    cursor: pointer;
+    white-space: nowrap;
+}

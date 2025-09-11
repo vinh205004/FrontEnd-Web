@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="../lib/Bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!--css-->
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/banner.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <!--js-->
+    <script src="../lib/Jquery/jquery-3.7.1.js"></script>
+    <script src="../lib/Bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/utils.js"></script>
+    <script src="../js/products.js"></script>
+    <script src="../js/list.js"></script>
+    <script src="../js/includeHTML.js" defer></script>
+    <script src="../js/listall.js"></script>
+</head>
+<body>
+     <!-- Include Header -->
+     <div include-html="header.html"></div>
+
+  <!-- Main Content -->
+  <main>
+      <!-- Banner Slideshow -->
+      <section class="banner">
+          <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1000">
+              <!-- Indicators -->
+              <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              </div>
+
+              <!-- Slideshow -->
+              <div class="carousel-inner">
+                  <div class="carousel-item active">
+                      <a href="category.html?category=WingBooks"><img src="../images/Banners/wingbook.PNG" class="d-block w-100" alt="WingBooks" width="1200" height="400" loading="lazy"></a>
+                      <div class="carousel-caption d-none d-md-block">
+                          <h3>WingBooks</h3>
+                          <p>Xem thêm</p>
+                      </div>
+                  </div>
+                  <div class="carousel-item">
+                      <a href="category.html?category=Doraemon"><img src="../images/Banners/doraemon.PNG" class="d-block w-100" alt="Doraemon" width="1200" height="400" loading="lazy"></a>
+                      <div class="carousel-caption d-none d-md-block">
+                          <h3>Sách mới về Doraemon</h3>
+                          <p>Khám phá bộ sưu tập mới nhất</p>
+                      </div>
+                  </div>
+                  <div class="carousel-item">
+                      <a href="category.html?category=Manga"><img src="../images/Banners/manga.PNG" class="d-block w-100" alt="Manga-Comic" width="1200" height="400" loading="lazy"></a>
+                      <div class="carousel-caption d-none d-md-block">
+                          <h3>Manga-Comic</h3>
+                          <p>Xem ngay</p>
+                      </div>
+                  </div>
+                  <div class="carousel-item">
+                      <a href="category.html?category=Lịch%20sử,%20truyền%20thống"><img src="../images/Banners/lịch sử.PNG" class="d-block w-100" alt="Sách lịch sử" width="1200" height="400" loading="lazy"></a>
+                      <div class="carousel-caption d-none d-md-block">
+                          <h3>Sách lịch sử</h3>
+                          <p>Xem ngay</p>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Controls -->
+              <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev" aria-label="Trước">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Trước</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next" aria-label="Tiếp">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Tiếp</span>
+              </button>
+          </div>
+      </section>
+
+      <!-- Sách Lịch sử - Truyền thống -->
+      <section class="product-section lichsu-section">
+          <div class="section-banner">
+              <a href="category.html?category=Lịch%20sử,%20truyền%20thống"><img src="../images/Banners/lịch sử.PNG" alt="Banner lịch sử" width="1200" height="150" loading="lazy" class="w-100"></a>
+          </div>
+          <div class="container mt-4">
+              <h2 class="text-center mb-4">Sách Lịch sử - Truyền thống</h2>
+              <div class="row" id="product-list"></div>
+          </div>
+            <!-- Hiển thị nút "Xem thêm >>" ở góc phải -->
+            <div class="text-end mt-2">
+                <a href="category.html?category=Lịch%20sử,%20truyền%20thống" class="text-danger fw-semibold" style="text-decoration: none;">Xem thêm &gt;&gt;</a>
+            </div>
+      </section>
+
+      <!-- Truyện Doraemon -->
+      <section class="product-section doraemon-section">
+          <div class="section-banner">
+              <a href="category.html?category=Doraemon"><img src="../images/Banners/doraemon.PNG" alt="Banner Doraemon" width="1200" height="150" loading="lazy" class="w-100"></a>
+          </div>
+          <div class="container mt-4">
+              <h2 class="text-center mb-4">Truyện Doraemon</h2>
+              <div class="row" id="dora-list"></div>
+          </div>
+          <!-- nút "Xem thêm >>" ở góc phải -->
+            <div class="text-end mt-2">
+                <a href="category.html?category=Doraemon" class="text-danger fw-semibold" style="text-decoration: none;">Xem thêm &gt;&gt;</a>
+            </div>
+      </section>
+
+      <!-- WingBooks -->
+      <section class="product-section wingbooks-section">
+          <div class="section-banner">
+              <a href="category.html?category=WingBooks"><img src="../images/Banners/wingbook.PNG" alt="Banner WingBooks" width="1200" height="150" loading="lazy" class="w-100"></a>
+          </div>
+          <div class="container mt-4">
+              <h2 class="text-center mb-4">WingBooks</h2>
+              <div class="row" id="wing-list"></div>
+          </div>
+          <!-- "Xem thêm >>" ở góc phải -->
+            <div class="text-end mt-2">
+                <a href="category.html?category=WingBooks" class="text-danger fw-semibold" style="text-decoration: none;">Xem thêm &gt;&gt;</a>
+            </div>
+      </section>
+  </main>
+
+  <!-- Include footer -->
+  <div include-html="footer.html"></div>
+  
+</body>
+</html>

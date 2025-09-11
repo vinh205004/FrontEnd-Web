@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../lib/Bootstrap/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!--css-->
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/banner.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <!--js-->
+    <script src="../lib/Jquery/jquery-3.7.1.js"></script>
+    <script src="../lib/Bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/utils.js"></script>
+    <script src="../js/products.js"></script>
+    <script src="../js/list.js"></script>
+    <script src="../js/includeHTML.js" defer></script>
+    <script src="../js/pagination.js"></script>
+    <script src="../js/listall.js"></script>
+</head>
+<body>
+    <!-- Include Header -->
+    <div include-html="header.html"></div>
+    <!-- Banner danh mục -->
+    <div id="category-banner" class="category-banner">
+        <div class="container">
+            <h1 id="category-title">LỊCH SỬ TRUYỀN THỐNG</h1>
+            <div class="breadcrumb-nav">
+                <a href="index.html">Trang chủ</a>
+            </div>
+        </div>
+    </div>
+    <!--Main-->
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Sidebar bộ lọc -->
+            <div class="col-lg-2 mb-3">
+                <div class="card">
+                    <div class="card-header bg-danger text-white d-flex justify-content-between align-items-center">
+                        <span><strong>KHOẢNG GIÁ</strong></span>
+                        
+                    </div>
+                    <div class="card-body p-2">
+                        <form id="price-filter-form">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="price" id="price-all" value="all" checked>
+                                <label class="form-check-label" for="price-all">Tất cả</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="price" id="price-1" value="<100000">
+                                <label class="form-check-label" for="price-1">Nhỏ hơn 50,000đ</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="price" id="price-2" value="100000-200000">
+                                <label class="form-check-label" for="price-2">Từ 50,000đ - 100,000đ</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="price" id="price-3" value="200000-300000">
+                                <label class="form-check-label" for="price-3">Từ 100,000đ - 200,000đ</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="price" id="price-4" value="300000-400000">
+                                <label class="form-check-label" for="price-4">Từ 200,000đ - 400,000đ</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="price" id="price-5" value="400000-500000">
+                                <label class="form-check-label" for="price-5">Từ 400,000đ - 500,000đ</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="price" id="price-6" value=">500000">
+                                <label class="form-check-label" for="price-6">Lớn hơn 500,000đ</label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- Danh sách sản phẩm -->
+            <div class="col-lg-10">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h2 id="category-title">Danh sách: </h2>
+                    <div class="sort-container">
+                        <label for="sort-select" class="me-2">Sắp xếp</label>
+                        <select id="sort-select" class="form-select form-select-sm" style="width: auto; display: inline-block;">
+                            <option value="name-asc">Tên A-Z</option>
+                            <option value="name-desc">Tên Z-A</option>
+                            <option value="price-asc">Giá thấp đến cao</option>
+                            <option value="price-desc">Giá cao đến thấp</option>
+                            <option value="newest">Mới nhất</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="book-list" class="row"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Phần phân trang -->
+    <div class="pagination-container d-flex justify-content-center mt-4">
+        <ul id="pagination" class="pagination">
+        <!-- Nút phân trang được tạo động bằng jQuery -->
+        </ul>
+    </div>
+    <!-- Include footer -->
+    <div include-html="footer.html"></div>
+    
+</body>
+</html>

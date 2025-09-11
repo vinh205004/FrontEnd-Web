@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../lib/Bootstrap/css/bootstrap.min.css">
+    <script src="../lib/Jquery/jquery-3.7.1.js"></script>
+    <script src="../lib/Bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!--css-->
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/banner.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <!--js-->
+    <script src="../js/products.js"></script>
+    <script src="../js/list.js"></script>
+    <script src="../js/includeHTML.js" defer></script>
+    <script src="../js/utils.js"></script>
+    <script src="../js/product-detail.js"></script>
+</head>
+<body>
+    <!-- Include Header -->
+    <div include-html="header.html"></div>
+    <!-- Main Content -->
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html" class="text-dark text-decoration-none">Trang chủ</a></li>
+                        <li class="breadcrumb-item"><a href="#" id="category-link" class="text-dark text-decoration-none">Danh mục</a></li>
+                        <li class="breadcrumb-item active" id="product-name-breadcrumb">Chi tiết sản phẩm</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <div class="row mt-4" id="product-detail-container">
+            <!-- Nội dung chi tiết sản phẩm được thêm bằng Js -->
+        </div>
+
+        <!-- Sản phẩm liên quan -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <h3 class="mb-4">Sản phẩm liên quan</h3>
+                <div class="row" id="related-products">
+                    <!-- Sản phẩm liên quan được thêm bằng Js -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Include footer -->
+    <div include-html="footer.html"></div>
+    
+</body>
+</html>

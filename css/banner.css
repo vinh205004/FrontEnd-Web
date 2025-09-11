@@ -1,0 +1,153 @@
+/* Slideshow styling */
+.carousel {
+    margin-bottom: 30px;
+}
+
+.carousel-inner {
+    border-radius: 0;
+    overflow: hidden;
+}
+
+.carousel-item {
+    height: 200px; /* chiều cao banner 200px */
+}
+
+.carousel-item img,
+.carousel-inner .carousel-item img {
+    object-fit: cover;
+    height: 100%;
+    max-height: 500px;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    /* Căn giữa phần caption */
+    bottom: 20%;
+    transform: translateY(50%);
+    width: auto;
+    max-width: 50%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.carousel-caption h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.carousel-caption p {
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+.carousel-indicators {
+    bottom: 10px;
+}
+
+.carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.carousel-control-prev, 
+.carousel-control-next {
+    width: 5%;
+}
+
+/* CSS cho banner danh mục */
+.category-banner {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    background-image: url('../images/Banners/ban1.PNG');
+}
+
+.category-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Lớp overlay tối */
+}
+
+.category-banner h1 {
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.breadcrumb-nav {
+    color: white;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.breadcrumb-nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.breadcrumb-nav span {
+    margin: 0 5px;
+}
+
+/* CSS cho sản phẩm */
+.product-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+.product-img-container {
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.product-img {
+    max-width: 100%;
+    max-height: 150px;
+    object-fit: contain;
+}
+
+.book-name {
+    font-size: 0.9rem;
+    height: 40px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.book-price {
+    font-size: 0.85rem;
+}
+
+.view-detail-btn {
+    font-size: 0.8rem;
+    transition: background-color 0.2s;
+}
